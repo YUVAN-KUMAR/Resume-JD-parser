@@ -88,7 +88,7 @@ def compare_education(resume_education: list, jd_education: list) -> float:
         print("jd_p:",total_score)
     
     if jd_secondary:
-        total_jd_categories += 1
+        total_jd_categories += 2
         secondary_score = compare_degree_group(resume_secondary, jd_secondary)
         total_score += secondary_score
         print("jd_s:",total_score)
@@ -219,15 +219,18 @@ def compare_experience(resume_experience: dict, jd_experience: list) -> float:
             print(resume_title)
             title_match = job_similarity(jd_job_title, resume_title) > 0.75
             print(title_match)
-            if skill_match or title_match or jd_experience_type == "fresher":
-                print("Skills match!")
-                score = 0.7 
-                print(resume_duration)
-                print(jd_min)
-                print(jd_max)  
+            if (jd_job_title and resume_title and title_match):
+                if skill_match:
+                    score = 0.7
+                else:
+                    score = 0.3
+            elif not jd_job_title or not resume_title:
+                if skill_match:
+                    score = 0.7
+
+            if title_match or skill_match:
                 if jd_min <= resume_duration <= jd_max:
-                    print("Experience matches within range")
-                    score += 0.3  
+                    score += 0.3
                 elif resume_duration >= jd_max:
                     score += 0.3
                 elif resume_duration >= jd_min:

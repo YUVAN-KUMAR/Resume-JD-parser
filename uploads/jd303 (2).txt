@@ -1,0 +1,16 @@
+1.Company Information:
+•Company Name: Yuvan
+•Company Address: Chennai,Coimbatore,bengaluru
+2.Job Details:
+•Position: Software Developer
+•Skills: Python,Java,Flask,Django,JavaScript
+•type:part
+•Requirements:
+Strong proficiency in Python, Java, and JavaScript. Experience in developing scalable web applications. Good understanding of data structures and algorithms.
+•Experience: experience in python and java
+•languages:proficient in Tamil,understandable in Hindi,added advantage in Marathi
+•salary:50,000 rupees per month in pyhton 60,000-80,000 dollar per year for java
+•Qualification: B.E/B.Tech in cse,ece,it,eee before 2023 at 60%. 10th and 12th should be above 80%
+postdate:
+3.Contact Us:
+Please send your resume to accenture@corporation.com or call 6380706134
